@@ -710,7 +710,9 @@ footer{
   </div>
 
 </div>
-        <a class="btn primary" href="#contact">Get Started</a>
+<button class="btn primary" onclick="payUPI(5000)">
+💳 Pay ₹5,000 via UPI
+</button>
       </div>
 
 
@@ -818,6 +820,11 @@ footer{
   © 2026 SaifWrites. All rights reserved.
 </footer>
 
-
+<script>
+function payUPI(amount) {
+  const upi = "upi://pay?pa=saifalisa4664-2@okaxis&pn=SaifWrites&am=" + amount + "&cu=INR";
+  window.location.href = upi;
+}
+</script>
 </body>
-  </html>
+</html>
