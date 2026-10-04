@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Saif Ali | SEO Blog Writing Services</title>
+
+<meta name="description" content="Professional SEO blog writing and website content services for small businesses.">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f7f9fc;
+  color:#172033;
+  line-height:1.6;
+}
+
+header{
+  background:#ffffff;
+  border-bottom:1px solid #e8ebf0;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.nav{
+  max-width:1100px;
+  margin:auto;
+  padding:18px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:800;
+}
+
+.logo span{
+  color:#2563eb;
+}
+
+nav a{
+  text-decoration:none;
+  color:#333;
+  margin-left:18px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.hero{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 20px;
+  display:grid;
+  grid-template-columns:1.2fr 0.8fr;
+  gap:40px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-block;
+  background:#e8f0ff;
+  color:#2563eb;
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:52px;
+  line-height:1.1;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  color:#2563eb;
+}
+
+.hero p{
+  color:#5c6678;
+  font-size:18px;
+  margin-bottom:28px;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  padding:13px 20px;
+  border-radius:9px;
+  font-weight:bold;
+}
+
+.primary{
+  background:#2563eb;
+  color:white;
+}
+
+.secondary{
+  border:1px solid #d7dce5;
+  color:#172033;
+  background:white;
+}
+
+.hero-card{
+  background:#ffffff;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 15px 45px rgba(0,0,0,.08);
+}
+
+.hero-card h3{
+  margin-bottom:18px;
+}
+
+.check{
+  margin:13px 0;
+  color:#445066;
+}
+
+section{
+  padding:70px 20px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:#687386;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.card{
+  background:white;
+  padding:28px;
+  border-radius:16px;
+  border:1px solid #e8ebf0;
+}
+
+.card h3{
+  margin:12px 0;
+}
+
+.card p{
+  color:#667085;
+}
+
+.icon{
+  font-size:30px;
+}
+
+.blogs{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.blog{
+  background:white;
+  padding:25px;
+  border-radius:16px;
+  border:1px solid #e8ebf0;
+}
+
+.blog small{
+  color:#2563eb;
+  font-weight:bold;
+}
+
+.blog h3{
+  margin:10px 0;
+}
+
+.blog p{
+  color:#667085;
+  font-size:14px;
+}
+
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.price-card{
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  border:1px solid #e5e8ee;
+}
+
+.price-card.featured{
+  border:2px solid #2563eb;
+}
+
+.price{
+  font-size:34px;
+  font-weight:800;
+  margin:15px 0;
+}
+
+.price-card ul{
+  list-style:none;
+  margin:20px 0;
+}
+
+.price-card li{
+  margin:10px 0;
+  color:#596579;
+}
+
+.contact{
+  background:#172033;
+  color:white;
+}
+
+.contact-box{
+  text-align:center;
+  max-width:700px;
+  margin:auto;
+}
+
+.contact-box p{
+  color:#c5ccda;
+  margin:15px 0 25px;
+}
+
+footer{
+  background:#101827;
+  color:#aeb7c7;
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+}
+
+@media(max-width:800px){
+  .hero{
+    grid-template-columns:1fr;
+    padding:55px 20px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .cards,
+  .blogs,
+  .pricing{
+    grid-template-columns:1fr;
+  }
+
+  nav a{
+    margin-left:8px;
+    font-size:12px;
+  }
+}
+
+@media(max-width:500px){
+  .nav{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  nav a{
+    margin:0 5px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Saif<span>Writes</span></div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#sample">Free Sample</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero" id="home">
+
+  <div>
+    <div class="badge">SEO BLOG WRITING FOR SMALL BUSINESSES</div>
+
+    <h1>
+      Get More Attention With
+      <span>Better Content.</span>
+    </h1>
+
+    <p>
+      I create clear, engaging and SEO-friendly blog content
+      that helps small businesses attract the right audience online.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="#contact">Hire Me</a>
+      <a class="btn secondary" href="#portfolio">View Samples</a>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <h3>What I Can Do For Your Business</h3>
+
+    <div class="check">✓ SEO-friendly blog articles</div>
+    <div class="check">✓ Website content</div>
+    <div class="check">✓ Local business content</div>
+    <div class="check">✓ Keyword-focused articles</div>
+    <div class="check">✓ Human-edited AI-assisted content</div>
+  </div>
+
+</section>
+
+
+<section id="services">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>My Services</h2>
+      <p>Content designed for small businesses and growing brands.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">✍️</div>
+        <h3>SEO Blog Writing</h3>
+        <p>
+          Helpful blog articles written around relevant search topics
+          and keywords.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔎</div>
+        <h3>Local SEO Content</h3>
+        <p>
+          Content created to help local businesses reach customers
+          searching online.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3>Website Content</h3>
+        <p>
+          Professional content for service pages, landing pages and
+          business websites.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<section id="portfolio">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Blog Samples</h2>
+      <p>Examples of content I can create for businesses.</p>
+    </div>
+
+    
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BLOG SAMPLE ARTICLES -->
+
+<section id="car-sample">
+  <div class="container">
+
+    <div class="section-title">
+      <small>CAR DETAILING</small>
+      <h2>How Often Should You Get Your Car Professionally Detailed?</h2>
+      <p>SEO Blog Sample</p>
+    </div>
+
+    <div class="card">
+
+      <p>
+        Keeping your car clean is about more than making it look good.
+        Regular professional detailing can help maintain the appearance
+        of your vehicle and keep the interior more comfortable.
+      </p>
+
+      <h3>How Often Should You Detail Your Car?</h3>
+
+      <p>
+        For many drivers, professional car detailing every three to six
+        months can be a useful routine. However, the right schedule depends
+        on how often you drive, where you park and the conditions your car
+        experiences.
+      </p>
+
+      <h3>Factors That Affect Your Detailing Schedule</h3>
+
+      <p>
+        If you drive every day, travel long distances or regularly park
+        outside, your vehicle may need more frequent cleaning. Dust, dirt,
+        road salt, rain and other environmental conditions can affect the
+        exterior and interior of your car.
+      </p>
+
+      <h3>Benefits of Professional Car Detailing</h3>
+
+      <p>
+        Professional detailing provides a deeper clean than a standard car
+        wash. Depending on the service, it may include interior cleaning,
+        exterior washing, paint care and other maintenance-focused services.
+      </p>
+
+      <h3>Conclusion</h3>
+
+      <p>
+        There is no single detailing schedule that works for every vehicle.
+        Consider your driving habits, parking conditions and the condition
+        of your car when deciding how often to book a professional service.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="restaurant">
+  <div class="container">
+
+    <div class="section-title">
+      <small>RESTAURANT</small>
+      <h2>How to Choose the Best Restaurant for a Family Dinner</h2>
+      <p>SEO Blog Sample</p>
+    </div>
+
+    <div class="card">
+
+      <p>
+        Choosing a restaurant for a family dinner can be easier when you
+        consider the needs of everyone in your group. Food, atmosphere,
+        location and service can all make a difference.
+      </p>
+
+      <h3>Check the Menu</h3>
+
+      <p>
+        Start by looking at the restaurant's menu online. A good family
+        restaurant should offer a variety of choices so different tastes
+        and preferences can be accommodated.
+      </p>
+
+      <h3>Consider the Location</h3>
+
+      <p>
+        A convenient location can make dinner more enjoyable. Check the
+        restaurant's distance, parking options and opening hours before
+        making your plans.
+      </p>
+
+      <h3>Look at Reviews</h3>
+
+      <p>
+        Online reviews can provide useful information about food, service
+        and the overall customer experience. Look for patterns across
+        multiple reviews instead of relying on a single comment.
+      </p>
+
+      <h3>Think About the Atmosphere</h3>
+
+      <p>
+        Families may prefer a comfortable environment where everyone can
+        enjoy their meal. Photos and customer reviews can help you get an
+        idea of the atmosphere before visiting.
+      </p>
+
+      <h3>Conclusion</h3>
+
+      <p>
+        The best restaurant for a family dinner depends on your group's
+        preferences. Checking the menu, location, reviews and atmosphere
+        beforehand can help you make a more confident choice.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="home-sample">
+  <div class="container">
+
+    <div class="section-title">
+      <small>HOME SERVICES</small>
+      <h2>5 Things to Check Before Hiring a Local Service</h2>
+      <p>SEO Blog Sample</p>
+    </div>
+
+    <div class="card">
+
+      <p>
+        Hiring a local service provider is an important decision. Whether
+        you need home maintenance, cleaning or another service, doing a
+        little research first can help you choose a suitable provider.
+      </p>
+
+      <h3>1. Check the Services</h3>
+
+      <p>
+        Make sure the company actually provides the service you need.
+        Review its website and service descriptions before contacting them.
+      </p>
+
+      <h3>2. Read Customer Reviews</h3>
+
+      <p>
+        Customer reviews can help you understand how a business communicates
+        with customers and delivers its services.
+      </p>
+
+      <h3>3. Ask About Pricing</h3>
+
+      <p>
+        Ask what is included in the service and whether there may be
+        additional charges. Clear pricing can help avoid confusion later.
+      </p>
+
+      <h3>4. Check Availability</h3>
+
+      <p>
+        Before booking, confirm that the company can provide the service
+        on the date and time you need.
+      </p>
+
+      <h3>5. Compare Your Options</h3>
+
+      <p>
+        If you have time, compare a few local providers based on their
+        services, reviews, communication and pricing.
+      </p>
+
+      <h3>Conclusion</h3>
+
+      <p>
+        Taking a few minutes to research a local service provider can help
+        you make a better-informed decision and find a business that fits
+        your needs.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+<section class="contact" id="about">
+  <div class="contact-box">
+    <div class="badge">ABOUT ME</div>
+
+    <h2>Helping Small Businesses Get Found Online</h2>
+
+    <p>
+      I write SEO-friendly blog content designed to help small businesses
+      attract more visitors, build trust, and improve their online presence.
+    </p>
+
+    <p>
+      My focus is simple: clear, useful and engaging content that customers
+      actually want to read.
+    </p>
+
+    <div class="buttons" style="justify-content:center;">
+      <a class="btn primary" href="#sample">
+        Get a Free Sample →
+      </a>
+    </div>
+  </div>
+</section>
+<section id="pricing">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Simple Pricing</h2>
+      <p>Flexible packages for small businesses.</p>
+    </div>
+
+    <div class="pricing">
+
+      <div class="price-card">
+        <h3>Starter</h3>
+        <div class="price">$60</div>
+
+        <ul>
+          <li>✓ 4 Blog Posts</li>
+          <li>✓ SEO-friendly writing</li>
+          <li>✓ Basic keyword research</li>
+          <li>✓ 800–1000 words each</li>
+        </ul>
+<div class="blogs">
+
+  <div class="blog">
+    <small>CAR DETAILING</small>
+    <h3>How Often Should You Get Your Car Professionally Detailed?</h3>
+    <p>
+      A practical guide explaining when and why professional
+      car detailing can be useful.
+    </p>
+    <a class="btn primary" href="#car-sample">Read Sample →</a>
+  </div>
+
+  <div class="blog">
+    <small>RESTAURANT</small>
+    <h3>How to Choose the Best Restaurant for a Family Dinner</h3>
+    <p>
+      Helpful tips customers can use when choosing a restaurant
+      for their next family meal.
+    </p>
+    <a class="btn primary" href="#restaurant-sample">Read Sample →</a>
+  </div>
+
+  <div class="blog">
+    <small>HOME SERVICES</small>
+    <h3>5 Things to Check Before Hiring a Local Service</h3>
+    <p>
+      A useful guide designed to help customers make better
+      service decisions.
+    </p>
+    <a class="btn primary" href="#home-sample">Read Sample →</a>
+  </div>
+
+</div>
+        <a class="btn primary" href="#contact">Get Started</a>
+      </div>
+
+
+      <div class="price-card featured">
+        <h3>Growth</h3>
+        <div class="price">$120</div>
+
+        <ul>
+          <li>✓ 8 Blog Posts</li>
+          <li>✓ SEO-friendly writing</li>
+          <li>✓ Keyword research</li>
+          <li>✓ 800–1200 words each</li>
+        </ul>
+
+        <a class="btn primary" href="#contact">Get Started</a>
+      </div>
+
+
+      <div class="price-card">
+        <h3>Pro</h3>
+        <div class="price">$200</div>
+
+        <ul>
+          <li>✓ 12 Blog Posts</li>
+          <li>✓ SEO-friendly writing</li>
+          <li>✓ Keyword research</li>
+          <li>✓ Content optimization</li>
+        </ul>
+
+        <a class="btn primary" href="#contact">Get Started</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="contact" id="faq">
+  <div class="contact-box">
+    <div class="badge">FAQ</div>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What type of businesses do you write for?</h3>
+    <p>
+      I create blog content for restaurants, car detailing businesses,
+      home services and other small businesses.
+    </p>
+
+    <h3>Are your blogs SEO-friendly?</h3>
+    <p>
+      Yes. My blog content is structured for search engines while keeping
+      the writing natural and useful for readers.
+    </p>
+
+    <h3>Can I get a free sample?</h3>
+    <p>
+      Yes. You can request a free sample before deciding to work together.
+    </p>
+
+    <div class="buttons" style="justify-content:center;">
+      <a class="btn primary" href="#sample">
+        Request Free Sample →
+      </a>
+    </div>
+  </div>
+</section>
+<section class="contact" id="sample">
+
+  <div class="contact-box">
+
+    <div class="badge">FREE BLOG SAMPLE</div>
+
+    <h2>Get a Free Blog Sample</h2>
+
+    <p>
+      Want to see the quality of my writing before hiring me?
+      Send me your business type and I’ll prepare a sample blog idea for you.
+    </p>
+
+    <div class="buttons" style="justify-content:center;">
+
+      <a
+        class="btn primary"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=saifalisa4664@gmail.com&su=Free%20Blog%20Sample%20Request"
+        target="_blank">
+        📧 Request Sample
+      </a>
+
+      <button
+        class="btn secondary"
+        onclick="navigator.clipboard.writeText('saifalisa4664@gmail.com'); alert('Email copied!');">
+        📋 Copy Email
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+  © 2026 SaifWrites. All rights reserved.
+</footer>
+
+
+</body>
+</html>
