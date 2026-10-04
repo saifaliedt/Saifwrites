@@ -815,16 +815,163 @@ footer{
 
 </section>
 
+<!-- STAR RATING -->
+<section class="rating-section" id="rating">
+  <div class="rating-box">
 
-<footer>
-  © 2026 SaifWrites. All rights reserved.
-</footer>
+    <div class="badge">CLIENT FEEDBACK</div>
+
+    <h2>Rate Your Experience</h2>
+
+    <p>Thank you for working with SaifWrites. Please rate your experience.</p>
+
+    <div class="stars">
+      <button type="button" onclick="selectRating(1)">★</button>
+      <button type="button" onclick="selectRating(2)">★</button>
+      <button type="button" onclick="selectRating(3)">★</button>
+      <button type="button" onclick="selectRating(4)">★</button>
+      <button type="button" onclick="selectRating(5)">★</button>
+    </div>
+
+    <p id="ratingText">Select a rating</p>
+
+    <input
+      type="text"
+      id="clientName"
+      placeholder="Your Name"
+    >
+
+    <textarea
+      id="clientReview"
+      placeholder="Write your review (optional)"
+      rows="4"
+    ></textarea>
+
+    <button
+      class="btn primary"
+      type="button"
+      onclick="submitRating()">
+      ⭐ Submit Rating
+    </button>
+
+    <p id="ratingMessage"></p>
+
+  </div>
+</section>
+
+<style>
+.rating-section {
+  padding: 50px 20px;
+}
+
+.rating-box {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 20px 0;
+}
+
+.stars button {
+  border: none;
+  background: transparent;
+  font-size: 42px;
+  cursor: pointer;
+  color: #888;
+}
+
+.stars button.selected {
+  color: #f5b301;
+}
+
+.rating-box input,
+.rating-box textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+#ratingMessage {
+  font-weight: bold;
+  margin-top: 15px;
+}
+</style>
 
 <script>
-function payUPI(amount) {
-  const upi = "upi://pay?pa=saifalisa4664-2@okaxis&pn=SaifWrites&am=" + amount + "&cu=INR";
-  window.location.href = upi;
+let selectedRating = 0;
+
+function selectRating(rating) {
+
+  selectedRating = rating;
+
+  const stars = document.querySelectorAll(".stars button");
+
+  stars.forEach(function(star, index) {
+    if (index < rating) {
+      star.classList.add("selected");
+    } else {
+      star.classList.remove("selected");
+    }
+  });
+
+  document.getElementById("ratingText").textContent =
+    rating + " out of 5 stars";
+}
+
+function submitRating() {
+
+  const name = document.getElementById("clientName").value.trim();
+  const review = document.getElementById("clientReview").value.trim();
+
+  if (selectedRating === 0) {
+    alert("Please select 1 to 5 stars.");
+    return;
+  }
+
+  if (name === "") {
+    alert("Please enter your name.");
+    return;
+  }
+
+  const rating = {
+    name: name,
+    stars: selectedRating,
+    review: review,
+    date: new Date().toLocaleDateString()
+  };
+
+try {
+  localStorage.setItem(
+    "saifwrites_client_rating",
+    JSON.stringify(rating)
+  );
+} catch (error) {
+  console.log("Rating storage skipped");
+}
+
+  document.getElementById("ratingMessage").textContent =
+    "⭐ Thank you, " + name + "! Your rating has been submitted.";
+
+  document.getElementById("clientName").value = "";
+  document.getElementById("clientReview").value = "";
+
+  selectedRating = 0;
+
+  document.querySelectorAll(".stars button").forEach(function(star) {
+    star.classList.remove("selected");
+  });
+
+  document.getElementById("ratingText").textContent =
+    "Select a rating";
 }
 </script>
-</body>
-</html>
+<!-- CHAT WITH 
